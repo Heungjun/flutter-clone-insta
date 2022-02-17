@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clone/src/components/imagepath.dart';
 import 'package:flutter_clone/src/controller/BottomNavController.dart';
 import 'package:flutter_clone/src/pages/home.dart';
+import 'package:flutter_clone/src/pages/search.dart';
 import 'package:get/get.dart';
 import 'components/image_data.dart';
 
@@ -14,12 +15,11 @@ class App extends GetView<BottomNavController> {
       child: Obx(
         () => Scaffold(
           body: IndexedStack(
-            index: controller.pageIndex.value,
+            // index: controller.pageIndex.value,
+            index: 1,
             children: [
               const Home(),
-              Container(
-                child: Center(child: Text('SEARCH')),
-              ),
+              const Search(),
               Container(
                 child: Center(child: Text('UPLOAD')),
               ),
